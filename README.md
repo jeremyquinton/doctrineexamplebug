@@ -12,16 +12,16 @@ Installation instructions
 
 Expected output is 
 
-listener gets called
+```listener gets called
 update 1
-update 2
+update 2```
 
 
 Actual output is 
 
-listener gets called
+```listener gets called
 update 1
 listener gets called
-update 2
+update 2```
 
  
