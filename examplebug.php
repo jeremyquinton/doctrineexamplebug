@@ -5,8 +5,11 @@ use example\Message;
 
 require_once 'bootstrap.php';
 
+$listener = new MessageListener();
+
 $resolver = $entityManager->getConfiguration()->getEntityListenerResolver();
-$resolver->register(new MessageListener());
+$resolver->register($listener);
+$entityManager->getConfiguration()->setEntityListenerResolver($resolver);
 
 $message = new Message();
 $message->setText('testing');
@@ -20,18 +23,13 @@ $message->setText('update 1');
 $entityManager->persist($message);
 $entityManager->flush();
 
+//resolver cleared of listener
 $resolver = $entityManager->getConfiguration()->getEntityListenerResolver();
 $resolver->clear();
-$resolver = $entityManager->getConfiguration()->setEntityListenerResolver($resolver);
+$entityManager->getConfiguration()->setEntityListenerResolver($resolver);
 
 //update 2 listener called - but its been cleared
 $message->setText('update 2');
 $entityManager->persist($message);
 $entityManager->flush();
 $entityManager->refresh($message);
-
-
-
-
-
-

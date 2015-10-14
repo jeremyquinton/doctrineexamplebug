@@ -16,7 +16,9 @@ listener gets called
 update 1
 update 2
 
+
 Actual output is 
+
 listener gets called
 update 1
 listener gets called

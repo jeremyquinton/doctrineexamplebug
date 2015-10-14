@@ -4,7 +4,8 @@ namespace example;
 
 class MessageListener
 {
-    public function preUpdate($something)
+    /** @PreUpdate */
+    public function preUpdatee($something)
     {
         echo "listener gets called" . PHP_EOL;
         echo $something->getText() . PHP_EOL;
