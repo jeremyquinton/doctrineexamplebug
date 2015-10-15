@@ -10,23 +10,17 @@ Installation instructions
 3. php vendor/bin/doctrine orm:schema-tool:create to create the test database
 4. php examplebug.php
 
-Expected output is 
+###Expected output is 
 
 listener gets called
-
 update 1
 
-update 2
 
-
-Actual output is 
+###Actual output is 
 
 listener gets called
-
 update 1
-
 listener gets called
-
 update 2
 
  
