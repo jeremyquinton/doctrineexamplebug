@@ -12,15 +12,15 @@ Installation instructions
 
 ###Expected output is 
 
-listener gets called
+listener gets called<br />
 update 1
 
 
 ###Actual output is 
 
-listener gets called
-update 1
-listener gets called
-update 2
+listener gets called<br />
+update 1<br />
+listener gets called<br />
+update 2<br />
 
  
